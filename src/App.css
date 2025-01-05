@@ -113,3 +113,17 @@ body {
   text-align: center;
   padding: 1rem;
 }
+
+
+/* 반응형 웹 */
+@media (max-width: 599px) {
+  .container { background-color: lightblue; }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+  .container { background-color: lightgreen; }
+}
+
+@media (min-width: 1200px) {
+  .container { background-color: lightcoral; }
+}
