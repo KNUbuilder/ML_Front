@@ -1,7 +1,7 @@
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; /* 양 끝에 요소 배치 */
+  align-items: center; /* 세로 축 중앙 정렬 */
   padding: 20px;
   background-color: #ffffff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -14,13 +14,29 @@
   text-decoration: none; /* 밑줄 제거 */
 }
 
-.nav a {
-  margin: 0 15px;
-  text-decoration: none; /* 링크 밑줄 제거 */
-  color: #333333;
-  font-weight: 500;
+.nav {
+  display: flex; /* 가로로 나열 */
+  align-items: center; /* 세로 축 중앙 정렬 */
 }
 
-.nav a:hover {
-  color: #0077ff;
+.nav a,
+.nav .logout-button {
+  margin: 0 15px; /* 요소 간 간격 설정 */
+  text-decoration: none; /* 밑줄 제거 */
+  color: #333333;
+  font-weight: 500;
+  cursor: pointer; /* 버튼처럼 보이도록 설정 */
+  background: none; /* 버튼 기본 스타일 제거 */
+  border: none;
+  padding: 0; /* 버튼의 기본 패딩 제거 */
+  font-family: inherit; /* 버튼의 폰트 계승 */
+}
+
+.nav a:hover{
+  color: #003cff;
+}
+.nav .logout-button {
+  color: #ffffff;
+  background-color: rgb(250, 103, 103);
+  padding: 6px;
 }
