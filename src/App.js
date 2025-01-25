@@ -51,7 +51,7 @@ function AppRoutes() {
           path="/login"
           element={<Login onLoginSuccess={handleLoginSuccess} />}
         />
-        <Route path="/oauth/callback" element={<OAuthCallback />} />
+        <Route path="/oauth/callback" element={<OAuthCallback onLoginSuccess={handleLoginSuccess} />} />
         <Route path="/signup" element={<Register />} />
         <Route
           path="/mypage"

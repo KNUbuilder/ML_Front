@@ -13,6 +13,10 @@
   color: #0077ff;
   text-decoration: none; /* 밑줄 제거 */
 }
+.logo-image {
+  height: 70px; /* 원하는 높이로 설정 */
+  width: auto;  /* 비율 유지 */
+}
 
 .nav {
   display: flex; /* 가로로 나열 */
@@ -25,6 +29,7 @@
   text-decoration: none; /* 밑줄 제거 */
   color: #333333;
   font-weight: 500;
+  font-size: large;
   cursor: pointer; /* 버튼처럼 보이도록 설정 */
   background: none; /* 버튼 기본 스타일 제거 */
   border: none;

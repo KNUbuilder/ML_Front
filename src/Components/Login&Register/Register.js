@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from 'react-router-dom';
 import './Register.css';
 import GoogleLogo from '../../Image/Oauth/google.png';
+
+
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -9,6 +11,7 @@ const Register = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -28,6 +31,7 @@ const Register = () => {
       if (response.ok) {
         alert('계정이 성공적으로 생성되었습니다!');
         setError('');
+        navigate('/login');
       } else {
         const data = await response.json();
         setError(data.message || '회원가입에 실패했습니다.');
